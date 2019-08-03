@@ -1,5 +1,6 @@
 # admlist_Parser
 Парсит людей из табличек на адмлисте. Парсит быстро, качает долго, но рабочая база данных есть на гугл диске. Скачиваете, кидаете в папку парсер, запускаете, ???, PROFIT.
+https://drive.google.com/file/d/1HkFP4CGswUG0pAMcQQtq4Zh1RFj06mHD/view?usp=sharing
 
 How to
 ---
