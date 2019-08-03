@@ -8,10 +8,23 @@ import codecs
 import sqlite3
 import html as h
 
-if len(sys.argv)<2:
+if len(sys.argv)<2 or sys.argv[1] == '--help' :
     print('Create [n]ew table or [F]ind student')
 elif sys.argv[1].lower() == 'n':
-    os.remove('Students.db')
+    print('Going to delete previous db, are you sure? y/n')
+    while inp.lower() not in 'yn':        
+        inp = input()
+        if inp.lower() == 'y':
+            pass
+        elif inp.lower() == 'n':
+            print('Try again')
+            quit()
+        else:
+            print('Can\'t recognize, try again.')
+    try:
+        os.remove('Students.db')
+    except:
+        print('Did not find the previous database, creating a new one')
     conn=sqlite3.connect('Students.db')
     cursor = conn.cursor()
     cursor.execute("""CREATE TABLE students
@@ -144,4 +157,4 @@ else:
 try:
     conn.commit()
 except:
-    print('R u stupid?')
+    print('--help to help')
