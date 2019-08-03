@@ -100,8 +100,8 @@ elif sys.argv[1].lower() == 'f':
     conn=sqlite3.connect('Students.db')
     cursor = conn.cursor()
     while True:
-        Name = input('Name : ')
         Surname = input('Surname : ')
+        Name = input('Name : ')
         Patronymic = input('Patronymic : ')
         if Name:
             if Surname:
