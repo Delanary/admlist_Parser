@@ -10,6 +10,7 @@ import html as h
 
 if len(sys.argv)<2 or sys.argv[1] == '--help' :
     print('Create [n]ew table or [F]ind student')
+    quit()
 elif sys.argv[1].lower() == 'n':
     print('Going to delete previous db, are you sure? y/n')
     while inp.lower() not in 'yn':        
