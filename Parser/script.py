@@ -13,8 +13,8 @@ if len(sys.argv)<2 or sys.argv[1] == '--help' :
     quit()
 elif sys.argv[1].lower() == 'n':
     print('Going to delete previous db, are you sure? y/n')
+    inp = input()
     while inp.lower() not in 'yn':        
-        inp = input()
         if inp.lower() == 'y':
             pass
         elif inp.lower() == 'n':
@@ -22,6 +22,7 @@ elif sys.argv[1].lower() == 'n':
             quit()
         else:
             print('Can\'t recognize, try again.')
+        inp = input()
     try:
         os.remove('Students.db')
     except:
